@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1695681612222" clover="3.2.0">
-  <project timestamp="1695681612222" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1695827245893" clover="3.2.0">
+  <project timestamp="1695827245893" name="All files">
+    <metrics statements="46" coveredstatements="41" conditionals="10" coveredconditionals="8" methods="2" coveredmethods="2" elements="58" coveredelements="51" complexity="0" loc="46" ncloc="46" packages="1" files="2" classes="2"/>
+    <file name="hierarchyCardValue.js" path="D:\IT-BRAZIL-ACADEMY-SALTO-CC-GRUPO-04\src\rules\hierarchyCardValue.js">
+      <metrics statements="20" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="2" count="4" type="stmt"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="7" count="4" type="cond" truecount="0" falsecount="1"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="0" type="stmt"/>
+      <line num="10" count="0" type="stmt"/>
+      <line num="11" count="4" type="stmt"/>
+      <line num="12" count="4" type="stmt"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="15" count="4" type="stmt"/>
+      <line num="16" count="4" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="18" count="4" type="stmt"/>
+      <line num="19" count="4" type="stmt"/>
+      <line num="20" count="4" type="stmt"/>
+    </file>
+    <file name="turnedCard.js" path="D:\IT-BRAZIL-ACADEMY-SALTO-CC-GRUPO-04\src\rules\turnedCard.js">
+      <metrics statements="26" coveredstatements="24" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
+      <line num="2" count="13" type="stmt"/>
+      <line num="3" count="13" type="cond" truecount="1" falsecount="0"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="12" type="cond" truecount="1" falsecount="1"/>
+      <line num="7" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="9" count="12" type="cond" truecount="1" falsecount="0"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="8" type="cond" truecount="1" falsecount="0"/>
+      <line num="16" count="8" type="stmt"/>
+      <line num="17" count="8" type="stmt"/>
+      <line num="18" count="13" type="stmt"/>
+      <line num="19" count="13" type="stmt"/>
+      <line num="20" count="13" type="stmt"/>
+      <line num="21" count="13" type="stmt"/>
+      <line num="22" count="13" type="stmt"/>
+      <line num="23" count="13" type="stmt"/>
+      <line num="24" count="13" type="stmt"/>
+      <line num="25" count="13" type="stmt"/>
+      <line num="26" count="13" type="stmt"/>
+    </file>
   </project>
 </coverage>
