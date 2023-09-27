@@ -15,8 +15,13 @@ describe('hierarchy Card Value', () => {
     expect(result).toEqual(['5', '3', '2', 'A', 'K', 'J', 'Q', '7', '6', '4']);
   });
 
-  it('should reorder the hierarchy correctly for "4"', () => {
+  it('should reorder the hierarchy correctly for "2"', () => {
     const result = hierarchyCardValue('2');
     expect(result).toEqual(['3', '2', 'A', 'K', 'J', 'Q', '7', '6', '5', '4']);
+  });
+
+  it('should reorder the hierarchy correctly for "3"', () => {
+    const result = hierarchyCardValue('3');
+    expect(result).toEqual(['4', '3', '2', 'A', 'K', 'J', 'Q', '7', '6', '5']);
   });
 });
