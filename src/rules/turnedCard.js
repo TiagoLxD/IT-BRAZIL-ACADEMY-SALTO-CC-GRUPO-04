@@ -16,7 +16,7 @@ export function turnedCard() {
     turnedCards
   }
 
-  const suits = ['Heart', 'Diamons', 'Club', 'Spade'];
+  const suits = ['Ouros', 'Espadas', 'Copas', 'Paus'];
 
   const randomSuit = Math.floor(Math.random() * suits.length);
 

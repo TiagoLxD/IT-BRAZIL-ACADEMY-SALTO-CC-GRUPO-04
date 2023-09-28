@@ -3,7 +3,7 @@ import { turnedCard } from '../../rules/turnedCard';
 describe('tests turned Card', () => {
   test('Should return a valid card', () => {
     const result = turnedCard();
-    const expectedPattern = /^[A2-9JKQ][\s]+(Heart|Diamons|Club|Spade)$/;
+    const expectedPattern = /^[A2-7JKQ][\s]+(Ouros|Espadas|Copas|Paus)$/;
 
     expect(result).toMatch(expectedPattern);
   });
