@@ -1,4 +1,4 @@
-export function hierarchyCardValue(turnedCard) {
+export function hierarchyCardValue(turnedCard:any) {
 	const hierarchy = ["3", "2", "A", "K", "J", "Q", "7", "6", "5", "4"];
 	let valueCard: string = '';
 
