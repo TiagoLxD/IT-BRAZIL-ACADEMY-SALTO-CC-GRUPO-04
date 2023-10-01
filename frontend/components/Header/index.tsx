@@ -56,14 +56,14 @@ const Header = () => {
                 <Image
                   src={Cassininho}
                   alt="logo"
-                  width={100}
+                  width={80}
                   height={15}
                   className="dark:hidden"
                 />
                 <Image
                   src={Cassininho}
                   alt="logo"
-                  width={100}
+                  width={80}
                   height={15}
                   className="hidden dark:block"
                 />
