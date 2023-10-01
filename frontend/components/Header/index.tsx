@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
-import poker from '../../public/images/logo//poker.png'
+import Cassininho from '../../public/images/logo/Cassininho.svg'
 
 
 const Header = () => {
@@ -54,14 +54,14 @@ const Header = () => {
                   } `}
               >
                 <Image
-                  src={poker}
+                  src={Cassininho}
                   alt="logo"
                   width={100}
                   height={15}
                   className="dark:hidden"
                 />
                 <Image
-                  src={poker}
+                  src={Cassininho}
                   alt="logo"
                   width={100}
                   height={15}
