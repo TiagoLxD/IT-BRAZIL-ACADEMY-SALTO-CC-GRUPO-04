@@ -8,19 +8,13 @@ const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/.jest/setup.ts"],
   testEnvironment: "jest-environment-jsdom",
   testPathIgnorePatterns: ["/node_modules", "/.next/"],
-  collectCoverage: true,
-  collectCoverageFrom: [
-    "src/**/*.{ts,tsx}",
-    "!src/@types/**/*",
-    "!src/pages/**/*",
-    "!src/constants/**/*",
-    "!src/styles/**/*",
-    "!src/**/*.stories.tsx",
-    "!src/**/styles.ts",
-    "!src/**/types.ts",
-  ],
+
   modulePaths: ["<rootDir>/src/", "<rootDir>/.jest"],
   moduleNameMapper: {},
+    transformIgnorePatterns: [
+      '/node_modules/',
+      '^.+\\.module\\.(css|sass|scss)$',
+    ],
 };
 
 module.exports = createJestConfig(customJestConfig);
