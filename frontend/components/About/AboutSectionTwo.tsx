@@ -21,18 +21,18 @@ const AboutSectionTwo = () => {
             <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  O Truco: O Jogo da Astúcia e Estratégia
+                  Truco: O jogo da astúcia e estratégia
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Se você é um aficionado por jogos de cartas, o truco é uma experiência que você não pode perder. É o jogo que combina habilidade, estratégia e aquela pitada de blefe que mantém todos na ponta da cadeira. Desafie seus amigos, jogadores de todo o mundo ou nossos dealers virtuais especializados e mostre suas habilidades no truco.
+                  Se você é um aficionado por jogos de cartas, o truco é uma experiência que você não pode perder. É uma competição que combina habilidade, estratégia e aquela pitada de blefe que mantém todos na ponta da cadeira. Desafie seus amigos, jogadores de todo o mundo ou nossos dealers virtuais especializados. Demonstre suas habilidades no Cassino Hamilton!
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Faça Parte da Ação!
+                  Faça parte da ação!
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Não perca a chance de fazer parte da ação em nosso cassino online e mergulhar na emocionante jornada do truco. A diversão e a estratégia estão apenas a alguns cliques de distância. Junte-se a nós hoje mesmo e mostre suas habilidades no truco enquanto experimenta a emoção de nosso cassino de classe mundial!
+                  Não perca a chance de fazer parte da ação em nosso Cassino online e mergulhar nessa emocionante jornada. A diversão e a estratégia estão a apenas um clique de distância. Junte-se a nós hoje mesmo e demonstre suas habilidades no truco enquanto vivencia a empolgação do nosso cassino de classe mundial!
                 </p>
               </div>
               <div className="mb-1">

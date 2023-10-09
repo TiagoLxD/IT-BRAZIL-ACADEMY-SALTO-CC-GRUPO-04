@@ -61,6 +61,7 @@ const Header = () => {
                   className="dark:hidden"
                 />
                 <Image
+                  data-testid = 'logoTeste'
                   src={Cassininho}
                   alt="logo"
                   width={80}
