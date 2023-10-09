@@ -4,3 +4,4 @@ dist
 coverage
 .vscode
 api-doc.json
+package-lock.json
