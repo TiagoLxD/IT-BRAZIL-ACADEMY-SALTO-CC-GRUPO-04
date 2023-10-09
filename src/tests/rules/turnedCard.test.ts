@@ -1,6 +1,8 @@
 import { expect, it, describe } from "vitest";
 import { turnedCard } from '../../rules/turnedCard';
 
+//Professor: tenho a impressão que testes de componentes menores podem ser validados aqui. O que vc.s recomendam?
+
 describe('tests turned Card', () => {
 	it('Should return a valid card', () => {
 		const result = turnedCard()
