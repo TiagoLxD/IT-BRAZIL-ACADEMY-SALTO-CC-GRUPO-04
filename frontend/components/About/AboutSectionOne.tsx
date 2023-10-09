@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Entre em um mundo de emoção e estratégia em nosso Cassino Online!"
-                paragraph="Bem-vindo ao universo de entretenimento mais emocionante que você já viu! No nosso Cassino Online, estamos redefinindo a maneira como você experimenta a diversão e a adrenalina dos jogos de cartas. E o destaque da nossa plataforma é, sem dúvida, o aclamado jogo de truco!."
+                title="Explore um universo repleto de emoção e estratégia no nosso Cassino Online!"
+                paragraph="Bem-vindo! Ao universo de entretenimento mais emocionante que você já viu em nosso Cassino Online. Estamos redefinindo a maneira como se experimenta a diversão e adrenalina dos jogos de cartas. O destaque da nossa plataforma é, sem dúvida, o aclamado jogo de truco!"
                 mb="44px"
               />
 
