@@ -1,7 +1,7 @@
 {
-	"name": "crud",
+	"name": "cassino-backend",
 	"version": "1.0.0",
-	"description": "Crud Prisma Finance",
+	"description": "cassino-backend",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
@@ -9,7 +9,7 @@
 		"generate:api:doc": "rimraf api-doc.json && npm run build && cross-env GENERATE_DOC=true jest --runInBand routes && node dist/doc/finalize-doc.js"
 	},
 	"keywords": [],
-	"author": "Carla Cristina",
+	"author": "Favian group",
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^5.1.0",
