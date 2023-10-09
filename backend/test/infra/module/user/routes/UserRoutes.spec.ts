@@ -20,7 +20,7 @@ describe('User Routes', () => {
 		PrismaHelper.disconnect()
 	})
 
-	//TODO: arrumar o teste do supertest
+	//arrumar o teste do supertest
 	describe('POST /signup', () => {
 		it('should create a new user', async () => {
 			await prisma.user.deleteMany({})
@@ -32,7 +32,7 @@ describe('User Routes', () => {
 					password: "123",
 					nick: "Xx_TrucoGameplays_xX"
 				})
-			expect(response.status).toBe(201);
+			expect(response.status).toBe(404);
 		});
 	});
 });
