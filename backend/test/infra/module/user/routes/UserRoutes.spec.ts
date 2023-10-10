@@ -1,8 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import request from 'supertest';
-import { afterAll, beforeAll, describe, expect, it } from 'vitest';
+import { afterAll, beforeAll, describe, it } from 'vitest';
 import { Express } from 'express';
-import { PrismaHelper } from '@/infra/database/prisma/PrismaHelper';
+import { PrismaHelper } from '@/infra/database/prisma/helpers/PrismaHelper';
 import { setupApp } from '@/config/app';
 
 let prisma: PrismaClient
@@ -24,15 +24,14 @@ describe('User Routes', () => {
 	describe('POST /signup', () => {
 		it('should create a new user', async () => {
 			await prisma.user.deleteMany({})
-			const response = await request(app)
+			await request(app)
 				.post('/truco/signup')
 				.send({
 					name: "Jean",
 					email: "jean.souza@gmail.com",
 					password: "123",
 					nick: "Xx_TrucoGameplays_xX"
-				})
-			expect(response.status).toBe(404);
+				}).expect(201);
 		});
 	});
 });

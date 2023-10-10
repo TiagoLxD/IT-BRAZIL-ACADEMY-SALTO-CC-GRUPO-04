@@ -1,4 +1,4 @@
-import { PrismaHelper } from './src/infra/database/prisma/PrismaHelper';
+import { PrismaHelper } from './src/infra/database/prisma/helpers/PrismaHelper';
 
 PrismaHelper.connect()
   .then(async () => {

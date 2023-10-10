@@ -13,7 +13,7 @@ export class LogControllerDecorator implements Controller {
 				data: request,
 			};
 		}
-		console.log(requestData())
+
 		const httpResponse = await this.controller.handle(requestData())
     return httpResponse
   }

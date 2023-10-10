@@ -1,0 +1,11 @@
+POST http://localhost:3000/relatorio/cadastrar
+Content-Type: application/json
+
+{
+  "data": "2023-02-27",
+  "filtrarProcesso": undefined,
+  "numeroProcesso": "2332",
+  "tipoProcesso": "contasareceber",
+  "especialidade": "diretor",
+  "tipoExportacao": "excel"
+}

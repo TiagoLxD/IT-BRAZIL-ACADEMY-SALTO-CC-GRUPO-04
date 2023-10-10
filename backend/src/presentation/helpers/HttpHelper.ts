@@ -2,6 +2,21 @@ import { ServerError } from "../../core/errors/ServerError";
 import { UnauthorizedError } from "../../core/errors/UnauthorizedError";
 import { HttpResponse } from "../protocols/Http";
 
+export const ok = (data: any): HttpResponse => ({
+  statusCode: 200,
+  body: data,
+});
+
+export const create = (data: any): HttpResponse => ({
+  statusCode: 201,
+  body: data,
+});
+
+export const noContent = (): HttpResponse => ({
+  statusCode: 204,
+  body: null,
+});
+
 export const badRequest = (error: Error): HttpResponse => ({
   statusCode: 400,
   body: error,
@@ -17,14 +32,9 @@ export const unauthorized = (): HttpResponse => ({
   body: new UnauthorizedError(),
 });
 
-export const serverError = (error: Error): HttpResponse => ({
-  statusCode: 500,
-  body: new ServerError(error.stack),
-});
-
-export const ok = (data: any): HttpResponse => ({
-  statusCode: 200,
-  body: data,
+export const conflictError = (error: Error): HttpResponse => ({
+  statusCode: 409,
+  body: error,
 });
 
 export const unprocessableEntity = (error: Error): HttpResponse => ({
@@ -32,12 +42,7 @@ export const unprocessableEntity = (error: Error): HttpResponse => ({
   body: error,
 });
 
-export const create = (data: any): HttpResponse => ({
-  statusCode: 201,
-  body: data,
-});
-
-export const noContent = (): HttpResponse => ({
-  statusCode: 204,
-  body: null,
+export const serverError = (error: Error): HttpResponse => ({
+  statusCode: 500,
+  body: new ServerError(error.stack),
 });
