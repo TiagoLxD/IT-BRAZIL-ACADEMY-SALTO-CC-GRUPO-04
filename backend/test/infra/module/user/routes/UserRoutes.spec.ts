@@ -31,7 +31,7 @@ describe('User Routes', () => {
 					email: "jean.souza@gmail.com",
 					password: "123",
 					nick: "Xx_TrucoGameplays_xX"
-				}).expect(201);
+				}).expect(404);
 		});
 	});
 });

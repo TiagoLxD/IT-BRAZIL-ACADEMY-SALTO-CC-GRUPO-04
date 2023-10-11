@@ -1,12 +1,14 @@
 import { CreateUser } from '@/core/application/useClass/CreateUser'
-import { PrismaCreateUser } from '@/infra/module/User/repositories/PrismaCreateUser'
+import { PrismaUserRepository } from '@/infra/module/User/repositories/PrismaUserRepository'
 import { PrismaClient } from '@prisma/client'
+import { HasherSpy } from '@test/mock/mock-cryptography'
 import { afterAll, beforeAll, describe, expect, it, vitest } from 'vitest'
 
 let createUser: CreateUser
-let prismaRepository: PrismaCreateUser
+let prismaRepository: PrismaUserRepository
 let prisma: PrismaClient
 let props: any
+let hasherSpy: HasherSpy
 
 props = {
 	name: 'Jean',
@@ -17,8 +19,9 @@ props = {
 
 describe('Prisma Repository', () => {
 	prisma = new PrismaClient()
-	prismaRepository = new PrismaCreateUser(prisma)
-	createUser = new CreateUser(prismaRepository)
+	prismaRepository = new PrismaUserRepository(prisma)
+	hasherSpy = new HasherSpy()
+	createUser = new CreateUser(prismaRepository, hasherSpy)
 
 	beforeAll(async () => {
 		await prisma.$connect()
