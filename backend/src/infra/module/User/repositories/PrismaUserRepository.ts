@@ -2,9 +2,17 @@ import { User, UserInterface } from "@/core/domain/User";
 import { UserRepositoryInterface } from "@/core/repositories/UserRepository";
 import { PrismaClient } from "@prisma/client";
 
-export class PrismaCreateUser implements UserRepositoryInterface{
+export class PrismaUserRepository implements UserRepositoryInterface{
 	constructor(private readonly prisma: PrismaClient) {}
-	findByNick(nick: string): Promise<UserInterface | undefined> {
+	async loadByEmail(email: string, password: string): Promise<UserInterface> {
+		return this.prisma.user.findUnique({
+			where: {
+				email,
+				password
+			}
+		})
+	}
+	async findByNick(nick: string): Promise<UserInterface | undefined> {
 		return this.prisma.user.findUnique({
 			where: {
 				nick

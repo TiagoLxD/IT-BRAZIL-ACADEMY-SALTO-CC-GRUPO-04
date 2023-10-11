@@ -2,7 +2,7 @@ import { CreateUserRequest } from '../../infra/module/User/controller/CreateUser
 import { Controller } from '../protocols/Controller'
 import { HttpResponse } from '../protocols/Http'
 
-export class LogControllerDecorator implements Controller {
+export class LogUserControllerDecorator implements Controller {
   constructor (
     private readonly controller: Controller,
   ) {}
