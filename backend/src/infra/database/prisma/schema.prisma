@@ -11,9 +11,79 @@ datasource db {
 }
 
 model User {
-  id       String @id @default(uuid())
-  name     String
-  nick     String @unique
-  email    String @unique
-  password String
+  id                      String          @id @default(uuid())
+  name                    String
+  nick                    String          @unique
+  email                   String          @unique
+  password                String
+  matchStartedAsPlayerOne Team[]          @relation("playerOneMatchStarted")
+  matchStartedAsPlayerTwo Team[]          @relation("playerTwoMatchStarted")
+  Match                   Match[]
+  MatchProgress           MatchProgress[]
+}
+
+model Card {
+  id            Int             @id
+  value         String
+  suit          String
+  MatchProgress MatchProgress[]
+}
+
+model Match {
+  id           String         @id @default(uuid())
+  name         String
+  betValue     Float
+  user         User           @relation(fields: [id_user], references: [id])
+  id_user      String
+  matchStarted MatchStarted[]
+}
+
+model Team {
+  id                    String         @id @default(uuid())
+  playerOne             User           @relation("playerOneMatchStarted", fields: [id_user_one], references: [id])
+  playerTwo             User           @relation("playerTwoMatchStarted", fields: [id_user_two], references: [id])
+  id_user_one           String
+  id_user_two           String
+  matchStartedAsTeamOne MatchStarted[] @relation("teamOneMatchStarted")
+  matchStartedAsTeamTwo MatchStarted[] @relation("teamTwoMatchStarted")
+  MatchWon              MatchWon[]
+}
+
+model MatchStarted {
+  id            String          @id @default(uuid())
+  match         Match           @relation(fields: [id_match], references: [id])
+  id_match      String
+  team_one      Team            @relation("teamOneMatchStarted", fields: [id_team_one], references: [id])
+  team_two      Team            @relation("teamTwoMatchStarted", fields: [id_team_two], references: [id])
+  id_team_one   String
+  id_team_two   String
+  MatchWon      MatchWon[]
+  MatchProgress MatchProgress[]
+}
+
+model MatchWon {
+  id              String       @id @default(uuid())
+  match           MatchStarted @relation(fields: [id_matchStarted], references: [id])
+  id_matchStarted String
+  team            Team         @relation(fields: [id_team], references: [id])
+  id_team         String
+  dateEnding      DateTime     @default(now())
+}
+
+model MatchProgress {
+  id              String        @id @default(uuid())
+  match           MatchStarted  @relation(fields: [id_matchStarted], references: [id])
+  id_matchStarted String
+  user            User          @relation(fields: [id_user], references: [id])
+  id_user         String
+  card            Card          @relation(fields: [id_card], references: [id])
+  id_card         Int
+  MatchPoints     MatchPoints[]
+}
+
+model MatchPoints {
+  id               String        @id @default(uuid())
+  match            MatchProgress @relation(fields: [id_matchProgress], references: [id])
+  id_matchProgress String
+  points           Int
 }

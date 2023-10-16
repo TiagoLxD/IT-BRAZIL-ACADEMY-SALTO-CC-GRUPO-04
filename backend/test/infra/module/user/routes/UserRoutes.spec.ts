@@ -23,7 +23,6 @@ describe('User Routes', () => {
 	//arrumar o teste do supertest
 	describe('POST /signup', () => {
 		it('should create a new user', async () => {
-			await prisma.user.deleteMany({})
 			await request(app)
 				.post('/truco/signup')
 				.send({

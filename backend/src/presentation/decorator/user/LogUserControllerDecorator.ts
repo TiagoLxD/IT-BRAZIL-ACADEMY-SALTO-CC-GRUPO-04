@@ -1,6 +1,6 @@
-import { CreateUserRequest } from '../../infra/module/User/controller/CreateUserController';
-import { Controller } from '../protocols/Controller'
-import { HttpResponse } from '../protocols/Http'
+import { CreateUserRequest } from '../../controller/user/factories/CreateUserFactory';
+import { Controller } from '../../protocols/Controller'
+import { HttpResponse } from '../../protocols/Http'
 
 export class LogUserControllerDecorator implements Controller {
   constructor (

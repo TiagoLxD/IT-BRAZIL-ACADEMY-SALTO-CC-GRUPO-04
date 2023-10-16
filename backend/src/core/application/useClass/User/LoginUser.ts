@@ -1,6 +1,6 @@
-import { LoginInterface, UserRepositoryInterface } from "../../repositories/UserRepository";
-import { UnauthorizedError } from "../../../core/errors/UnauthorizedError";
-import { HashComparer } from "../../../presentation/cryptography/hash-comparer";
+import { LoginInterface, UserRepositoryInterface } from "../../../repositories/UserRepository";
+import { UnauthorizedError } from "../../../errors/UnauthorizedError";
+import { HashComparer } from "../../../../presentation/cryptography/hash-comparer";
 
 export class LoginUser {
 	constructor(

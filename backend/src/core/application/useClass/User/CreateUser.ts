@@ -1,8 +1,7 @@
-import { Hasher } from "../../../presentation/cryptography/hasher";
-import { UniqueParamError } from "../../../core/errors/UniqueParam";
-import { User } from "../../domain/User";
-import { UserRepositoryInterface } from "../../repositories/UserRepository";
-import { EntityNotFound } from "@/core/errors/EntityNotFounder";
+import { Hasher } from "../../../../presentation/cryptography/hasher";
+import { UniqueParamError } from "../../../errors/UniqueParam";
+import { User } from "../../../domain/User";
+import { UserRepositoryInterface } from "../../../repositories/UserRepository";
 
 export class CreateUser {
 	constructor(

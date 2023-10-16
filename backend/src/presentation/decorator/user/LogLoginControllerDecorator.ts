@@ -1,6 +1,6 @@
-import { LoginUserRequest } from '../../infra/module/User/controller/LoginUserController';
-import { Controller } from '../protocols/Controller'
-import { HttpResponse } from '../protocols/Http'
+import { LoginUserRequest } from '../../controller/user/factories/LoginFactory';
+import { Controller } from '../../protocols/Controller'
+import { HttpResponse } from '../../protocols/Http'
 
 export class LogLoginControllerDecorator implements Controller {
   constructor (
