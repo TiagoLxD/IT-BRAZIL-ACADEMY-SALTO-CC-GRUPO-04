@@ -4,6 +4,10 @@ import { PrismaClient } from "@prisma/client";
 
 export class PrismaUserRepository implements UserRepositoryInterface{
 	constructor(private readonly prisma: PrismaClient) {}
+	async list(): Promise<User[]> {
+		const listUser = await this.prisma.user.findMany()
+		return listUser as User[]
+	}
 	async loadByEmail(email: string, password: string): Promise<UserInterface> {
 		return this.prisma.user.findUnique({
 			where: {

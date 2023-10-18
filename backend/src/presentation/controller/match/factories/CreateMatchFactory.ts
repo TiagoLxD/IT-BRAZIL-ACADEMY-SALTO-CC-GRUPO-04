@@ -1,3 +1,4 @@
+import { CreateMatchSchema } from "../../../../infra/module/Match/schema/CreateMatchSchema";
 import { CreateMatch } from "../../../../core/application/useClass/Match/CreateMatch";
 import { Match } from "../../../../core/domain/Match";
 import { badRequest, create, serverError } from "../../../helpers/HttpHelper";
@@ -17,8 +18,11 @@ export class CreateMatchFactory implements Controller {
       if (errorRequired) {
         return badRequest(errorRequired);
 			}
+			const schema = new CreateMatchSchema().isValid(request.data);
+      if (schema instanceof Error) {
+        return badRequest(schema);
+      }
 			const createMatch = await this.createMatch.execute(request.data)
-
 			return create(createMatch);
     } catch (error) {
       return serverError(error);

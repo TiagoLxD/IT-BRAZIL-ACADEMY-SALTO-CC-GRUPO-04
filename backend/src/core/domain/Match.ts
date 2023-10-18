@@ -1,7 +1,7 @@
 import { User } from "@prisma/client"
 
 export interface MatchInterface {
-	id?: string
+  id?: string
   name: string
   betValue: number
   user: User

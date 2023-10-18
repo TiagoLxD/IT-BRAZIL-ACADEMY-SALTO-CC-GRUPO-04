@@ -10,4 +10,5 @@ export interface UserRepositoryInterface {
 	findByEmail(email: string): Promise<UserInterface | undefined>
 	findByNick(email: string): Promise<UserInterface | undefined>
 	loadByEmail(email: string, password: string): Promise<UserInterface | undefined>
+	list(): Promise<User[]>
 }

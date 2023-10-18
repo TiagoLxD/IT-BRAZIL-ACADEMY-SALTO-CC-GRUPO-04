@@ -1,9 +1,11 @@
 import { User, UserInterface } from "@/core/domain/User";
-import { LoginInterface, UserRepositoryInterface } from "@/core/repositories/UserRepository";
+import { UserRepositoryInterface } from "@/core/repositories/UserRepository";
 
 export class InMemoryUserRepository implements UserRepositoryInterface {
-
 	items: User[] = [];
+	list(): Promise<User[]> {
+		return Promise.resolve(this.items);
+	}
 	findByEmail(email: string): Promise<UserInterface> {
 		const result = this.items.filter((item) => item.email === email)
 		if (result.length > 0) {

@@ -5,6 +5,7 @@ import { badRequest, conflictError, create, serverError } from "../../../helpers
 import { Controller } from "../../../protocols/Controller";
 import { HttpResponse } from "../../../protocols/Http";
 import { UniqueParamError } from "../../../../core/errors/UniqueParam";
+import { CreateUserSchema } from "../../../../infra/module/User/schema/CreateUserSchema";
 
 export class CreateUserFactory implements Controller {
   constructor(
@@ -23,6 +24,10 @@ export class CreateUserFactory implements Controller {
       if (errorUser) {
         return badRequest(errorUser);
 			}
+			const schema = new CreateUserSchema().isValid(request.data);
+      if (schema instanceof Error) {
+        return badRequest(schema);
+      }
 			const createUser = await this.createUser.execute(request.data)
 			if (createUser instanceof Error) {
 				if (createUser instanceof UniqueParamError) {
