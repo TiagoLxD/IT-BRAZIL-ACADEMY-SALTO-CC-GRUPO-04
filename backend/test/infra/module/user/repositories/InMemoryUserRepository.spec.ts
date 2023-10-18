@@ -27,4 +27,9 @@ describe('InMemoryRepository Repository', () => {
 		inMemoryRepository.create(props);
 		expect(inMemoryRepository.items).toEqual(expect.arrayContaining([expect.objectContaining(props)]))
 	})
+
+	it('Create new Users called repository', async () => {
+		inMemoryRepository.list();
+		expect(inMemoryRepository.items).toEqual([])
+	})
 })
