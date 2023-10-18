@@ -7,6 +7,7 @@
 		"start": "npx dotenv-cli -e .env -- nodemon --exec sucrase-node ./dist/index.js",
 		"prestart": "rimraf dist && tsc -p tsconfig-build.json",
 		"test": "vitest",
+		"test:coverage": "vitest --coverage",
 		"build": "rimraf dist && tsc -p tsconfig-build.json",
 		"prisma:migrate": "npx dotenv-cli -e .env -- npx prisma migrate dev --schema ./src/infra/database/prisma/schema.prisma",
 		"generate:api:doc": "rimraf api-doc.json && npm run build && cross-env GENERATE_DOC=true jest --runInBand routes && node dist/doc/finalize-doc.js"
@@ -24,6 +25,7 @@
 		"dotenv-cli": "^7.3.0",
 		"express": "^4.18.2",
 		"fast-glob": "^3.3.1",
+		"joi": "^17.11.0",
 		"jsonwebtoken": "^9.0.0",
 		"lodash": "^4.17.21",
 		"sqlite3": "^5.1.6",
@@ -37,6 +39,7 @@
 		"@types/validator": "^13.11.2",
 		"@typescript-eslint/eslint-plugin": "^6.7.3",
 		"@typescript-eslint/parser": "^6.7.3",
+		"@vitest/coverage-v8": "^0.34.6",
 		"eslint": "^8.50.0",
 		"eslint-config-standard": "^17.1.0",
 		"eslint-plugin-import": "^2.28.1",
